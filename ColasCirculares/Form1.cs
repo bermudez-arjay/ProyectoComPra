@@ -17,8 +17,8 @@ namespace ColasCirculares
         public Form1()
         {
             InitializeComponent();
-            lblStatus.Text = ""; 
-            
+            lblStatus.Text = "";
+
         }
 
 
@@ -59,7 +59,7 @@ namespace ColasCirculares
             }
         }
 
-      
+
 
         private void btnQueueSize_Click(object sender, EventArgs e)
         {
@@ -80,6 +80,11 @@ namespace ColasCirculares
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

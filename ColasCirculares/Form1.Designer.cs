@@ -43,7 +43,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnQueueSize = new System.Windows.Forms.Button();
             this.txtQueueSize = new System.Windows.Forms.TextBox();
@@ -55,57 +54,64 @@
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(83, 45);
+            this.txtProductName.Location = new System.Drawing.Point(124, 69);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(170, 20);
+            this.txtProductName.Size = new System.Drawing.Size(253, 26);
             this.txtProductName.TabIndex = 0;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(83, 183);
+            this.txtPrice.Location = new System.Drawing.Point(124, 282);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(170, 20);
+            this.txtPrice.Size = new System.Drawing.Size(253, 26);
             this.txtPrice.TabIndex = 1;
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(83, 123);
+            this.txtQuantity.Location = new System.Drawing.Point(124, 189);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(170, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(253, 26);
             this.txtQuantity.TabIndex = 2;
             // 
             // nombreproducto
             // 
             this.nombreproducto.AutoSize = true;
-            this.nombreproducto.Location = new System.Drawing.Point(6, 29);
+            this.nombreproducto.Location = new System.Drawing.Point(9, 45);
+            this.nombreproducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nombreproducto.Name = "nombreproducto";
-            this.nombreproducto.Size = new System.Drawing.Size(93, 13);
+            this.nombreproducto.Size = new System.Drawing.Size(137, 20);
             this.nombreproducto.TabIndex = 3;
             this.nombreproducto.Text = "Nombre Producto:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 167);
+            this.label2.Location = new System.Drawing.Point(9, 257);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Precio Producto :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 98);
+            this.label3.Location = new System.Drawing.Point(9, 151);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.Size = new System.Drawing.Size(149, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Cantidad Producto :";
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(173, 224);
+            this.btnAddProduct.Location = new System.Drawing.Point(260, 345);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(80, 32);
+            this.btnAddProduct.Size = new System.Drawing.Size(120, 49);
             this.btnAddProduct.TabIndex = 6;
             this.btnAddProduct.Text = "Comprar";
             this.btnAddProduct.UseVisualStyleBackColor = true;
@@ -118,27 +124,33 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridViewProducts.Location = new System.Drawing.Point(6, 16);
+            this.dataGridViewProducts.Location = new System.Drawing.Point(9, 25);
+            this.dataGridViewProducts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
-            this.dataGridViewProducts.Size = new System.Drawing.Size(407, 320);
+            this.dataGridViewProducts.RowHeadersWidth = 62;
+            this.dataGridViewProducts.Size = new System.Drawing.Size(610, 492);
             this.dataGridViewProducts.TabIndex = 8;
+            this.dataGridViewProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellContentClick);
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "Nombre";
+            this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "Cantidad";
+            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "Precio";
+            this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             // 
             // groupBox1
@@ -151,18 +163,21 @@
             this.groupBox1.Controls.Add(this.btnAddProduct);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 92);
+            this.groupBox1.Location = new System.Drawing.Point(18, 142);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 268);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(489, 412);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Compra Productos";
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 224);
+            this.btnExit.Location = new System.Drawing.Point(18, 345);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 32);
+            this.btnExit.Size = new System.Drawing.Size(112, 49);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Salir";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -171,49 +186,45 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridViewProducts);
-            this.groupBox2.Location = new System.Drawing.Point(344, 12);
+            this.groupBox2.Location = new System.Drawing.Point(516, 18);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(419, 342);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(628, 526);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Productos Comprados";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lblStatus);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.btnQueueSize);
             this.groupBox3.Controls.Add(this.txtQueueSize);
-            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Location = new System.Drawing.Point(18, 18);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(326, 74);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(489, 114);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(9, 58);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(35, 13);
-            this.lblStatus.TabIndex = 8;
-            this.lblStatus.Text = "label4";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 27);
+            this.label1.Location = new System.Drawing.Point(14, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(139, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tamaño C.Circular";
             // 
             // btnQueueSize
             // 
-            this.btnQueueSize.Location = new System.Drawing.Point(245, 19);
+            this.btnQueueSize.Location = new System.Drawing.Point(368, 29);
+            this.btnQueueSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnQueueSize.Name = "btnQueueSize";
-            this.btnQueueSize.Size = new System.Drawing.Size(75, 23);
+            this.btnQueueSize.Size = new System.Drawing.Size(112, 35);
             this.btnQueueSize.TabIndex = 1;
             this.btnQueueSize.Text = "Tamaño";
             this.btnQueueSize.UseVisualStyleBackColor = true;
@@ -221,19 +232,21 @@
             // 
             // txtQueueSize
             // 
-            this.txtQueueSize.Location = new System.Drawing.Point(109, 21);
+            this.txtQueueSize.Location = new System.Drawing.Point(164, 32);
+            this.txtQueueSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtQueueSize.Name = "txtQueueSize";
-            this.txtQueueSize.Size = new System.Drawing.Size(130, 20);
+            this.txtQueueSize.Size = new System.Drawing.Size(193, 26);
             this.txtQueueSize.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 366);
+            this.ClientSize = new System.Drawing.Size(1158, 563);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
@@ -265,7 +278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnExit;
     }
 }
