@@ -53,7 +53,7 @@ namespace ColasCirculares
                 txtQuantity.Clear();
                 txtPrice.Clear();
             }
-            catch (InvalidOperationException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
