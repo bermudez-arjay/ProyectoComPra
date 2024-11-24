@@ -1,10 +1,6 @@
 # ProyectoComPra
-Proyecto final Wilmer Palacios
-
-# Grupo #6
+Proyecto final Wilmer Palacios 
 
 # Colaboradores
 - Arjay Gomez Bermudez.
-  Usuario: bermudez-arjay
 - Alisveth Jhonary Centeno Escorcia.
-  Usuario: alisveth_centeno
