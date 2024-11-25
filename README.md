@@ -1,5 +1,7 @@
 # ProyectoComPra
-Proyecto final Wilmer Palacios 
+Proyecto final Wilmer Palacios
+
+# Grupo #6
 
 # Colaboradores
 - Arjay Gomez Bermudez.
