@@ -53,6 +53,24 @@
     <Compile Include="ColasSimples\ColasSimple.Designer.cs">
       <DependentUpon>ColasSimple.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grafos\Dijasktra\Dijasktra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafos\Dijasktra\Dijasktra.Designer.cs">
+      <DependentUpon>Dijasktra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafos\Floyd\Floyd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafos\Floyd\Floyd.Designer.cs">
+      <DependentUpon>Floyd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafos\Marshall\Marshall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafos\Marshall\Marshall.Designer.cs">
+      <DependentUpon>Marshall.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListasDobles\ListaDobleProductos.cs" />
     <Compile Include="ListasDobles\ListaDoble.cs">
       <SubType>Form</SubType>
@@ -97,6 +115,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ColasSimples\ColasSimple.resx">
       <DependentUpon>ColasSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafos\Dijasktra\Dijasktra.resx">
+      <DependentUpon>Dijasktra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafos\Floyd\Floyd.resx">
+      <DependentUpon>Floyd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafos\Marshall\Marshall.resx">
+      <DependentUpon>Marshall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListasDobles\ListaDoble.resx">
       <DependentUpon>ListaDoble.cs</DependentUpon>
