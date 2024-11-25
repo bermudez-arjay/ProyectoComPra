@@ -35,8 +35,8 @@ namespace ProyectoCompra.ListasSimple
                 Producto = producto;
                 Siguente = null;
             }
-
         }
+
         public class ListaProductos
         {
             private Nodo cabeza;
@@ -54,11 +54,11 @@ namespace ProyectoCompra.ListasSimple
                     while (actual.Siguente != null)
                     {
                         actual = actual.Siguente;
-
                     }
                     actual.Siguente = nuevoNodo;
                 }
             }
+
             public List<Producto> ObtenerProductos()
             {
                 List<Producto> productos = new List<Producto>();
@@ -70,8 +70,40 @@ namespace ProyectoCompra.ListasSimple
                 }
                 return productos;
             }
+
+            public void EliminarProductoPorNombre(string nombre)
+            {
+                if (cabeza == null)
+                {
+                    return;
+                }
+
+                if (cabeza.Producto.Nombre == nombre)
+                {
+                    cabeza = cabeza.Siguente;
+                    return;
+                }
+
+                Nodo actual = cabeza;
+                Nodo anterior = null;
+
+                while (actual != null && actual.Producto.Nombre != nombre)
+                {
+                    anterior = actual;
+                    actual = actual.Siguente;
+                }
+
+                if (actual == null)
+                {
+                    return;
+                }
+
+                anterior.Siguente = actual.Siguente;
+            }
         }
+
         private ListaProductos listaProductos = new ListaProductos();
+
         public ListaSimple()
         {
             InitializeComponent();
@@ -80,6 +112,7 @@ namespace ProyectoCompra.ListasSimple
 
         public void CargarGrid()
         {
+            datgridventory.Rows.Clear();
             foreach (var producto in listaProductos.ObtenerProductos())
             {
                 datgridventory.Rows.Add(producto.Nombre, producto.Precio, producto.Stock);
@@ -92,10 +125,28 @@ namespace ProyectoCompra.ListasSimple
             decimal precio = Convert.ToDecimal(txtPrecio.Text);
             int stock = Convert.ToInt32(txtStock.Text);
 
-
             listaProductos.AgregarProductos(new Producto(nombre, precio, stock));
             CargarGrid();
+
+            txtNombre.Clear();
+            txtPrecio.Clear();
+            txtStock.Clear();
         }
 
+        private void EliminarProducto_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombreEliminar.Text;
+            listaProductos.EliminarProductoPorNombre(nombre);
+            CargarGrid();
+
+            txtNombreEliminar.Clear();
+        }
+
+        private void Salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
+
+
 }
