@@ -30,6 +30,7 @@
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.btnQueueSize = new System.Windows.Forms.Button();
             this.txtQueueSize = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -45,22 +46,27 @@
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.lblStatus);
             this.groupBox3.Controls.Add(this.btnQueueSize);
             this.groupBox3.Controls.Add(this.txtQueueSize);
-            this.groupBox3.Location = new System.Drawing.Point(30, 18);
+            this.groupBox3.Location = new System.Drawing.Point(12, 1);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(326, 74);
+            this.groupBox3.Size = new System.Drawing.Size(326, 62);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             // 
@@ -73,6 +79,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tamaño C.Circular";
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(9, 40);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(42, 13);
+            this.lblStatus.TabIndex = 22;
+            this.lblStatus.Text = "estado ";
+            // 
             // btnQueueSize
             // 
             this.btnQueueSize.Location = new System.Drawing.Point(245, 19);
@@ -81,7 +96,7 @@
             this.btnQueueSize.TabIndex = 1;
             this.btnQueueSize.Text = "Tamaño";
             this.btnQueueSize.UseVisualStyleBackColor = true;
-            this.btnQueueSize.Click += new System.EventHandler(this.btnQueueSize_Click);
+            this.btnQueueSize.Click += new System.EventHandler(this.btnEstablecerTamaño_Click);
             // 
             // txtQueueSize
             // 
@@ -93,12 +108,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridViewProducts);
-            this.groupBox2.Location = new System.Drawing.Point(378, 1);
+            this.groupBox2.Location = new System.Drawing.Point(344, 1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(419, 342);
+            this.groupBox2.Size = new System.Drawing.Size(570, 261);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Productos Comprados";
+            this.groupBox2.Text = "Carrito de Productos ";
             // 
             // dataGridViewProducts
             // 
@@ -110,7 +125,7 @@
             this.dataGridViewProducts.Location = new System.Drawing.Point(6, 16);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
             this.dataGridViewProducts.RowHeadersWidth = 62;
-            this.dataGridViewProducts.Size = new System.Drawing.Size(407, 320);
+            this.dataGridViewProducts.Size = new System.Drawing.Size(558, 236);
             this.dataGridViewProducts.TabIndex = 8;
             // 
             // Column1
@@ -136,13 +151,13 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(20, 206);
+            this.btnExit.Location = new System.Drawing.Point(815, 16);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 32);
             this.btnExit.TabIndex = 19;
             this.btnExit.Text = "Salir";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
+            this.btnExit.Click += new System.EventHandler(this.btnEstablecerTamaño_Click);
             // 
             // nombreproducto
             // 
@@ -155,7 +170,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(113, 166);
+            this.txtPrice.Location = new System.Drawing.Point(111, 130);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(170, 20);
             this.txtPrice.TabIndex = 13;
@@ -169,25 +184,25 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(113, 96);
+            this.txtQuantity.Location = new System.Drawing.Point(113, 82);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(170, 20);
             this.txtQuantity.TabIndex = 14;
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(109, 206);
+            this.btnAddProduct.Location = new System.Drawing.Point(6, 16);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(68, 32);
             this.btnAddProduct.TabIndex = 18;
-            this.btnAddProduct.Text = "Comprar";
+            this.btnAddProduct.Text = "Agregar I ";
             this.btnAddProduct.UseVisualStyleBackColor = true;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click_1);
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAgregarAlInicio_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 80);
+            this.label3.Location = new System.Drawing.Point(31, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 13);
             this.label3.TabIndex = 17;
@@ -196,44 +211,75 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 150);
+            this.label2.Location = new System.Drawing.Point(43, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Precio Producto :";
             // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(222, 225);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(42, 13);
-            this.lblStatus.TabIndex = 22;
-            this.lblStatus.Text = "estado ";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.nombreproducto);
-            this.groupBox1.Controls.Add(this.lblStatus);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtQuantity);
-            this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.txtProductName);
-            this.groupBox1.Controls.Add(this.btnAddProduct);
             this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Location = new System.Drawing.Point(30, 99);
+            this.groupBox1.Location = new System.Drawing.Point(12, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 244);
+            this.groupBox1.Size = new System.Drawing.Size(326, 193);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.btnAddProduct);
+            this.groupBox4.Controls.Add(this.btnExit);
+            this.groupBox4.Location = new System.Drawing.Point(12, 259);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(896, 54);
+            this.groupBox4.TabIndex = 24;
+            this.groupBox4.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(245, 16);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(68, 32);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Eliminar F";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnEliminarDelFinal_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(84, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(68, 32);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Eliminar I";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnEliminarDelInicio_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(163, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(68, 32);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Agregar F";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnAgregarAlFinal_Click);
             // 
             // ColasCiculares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 415);
+            this.ClientSize = new System.Drawing.Size(920, 415);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -246,6 +292,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -271,5 +318,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

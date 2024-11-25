@@ -86,16 +86,6 @@ namespace ProyectoCompra.ListasSimple
             }
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AgregarProducto_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
@@ -107,29 +97,5 @@ namespace ProyectoCompra.ListasSimple
             CargarGrid();
         }
 
-        private void Salir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

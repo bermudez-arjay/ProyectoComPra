@@ -44,6 +44,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.btnFinslizarCompra = new System.Windows.Forms.Button();
+            this.lblEstadoPila = new System.Windows.Forms.Label();
+            this.btnEliminarUltimo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -51,17 +53,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnEliminarUltimo);
             this.groupBox1.Controls.Add(this.txtPrecioProducto);
             this.groupBox1.Controls.Add(this.txtCantidadProducto);
             this.groupBox1.Controls.Add(this.txtNombreProducto);
-            this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Location = new System.Drawing.Point(4, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 276);
+            this.groupBox1.Size = new System.Drawing.Size(201, 291);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Comprs de Prductos";
@@ -69,27 +71,30 @@
             // txtPrecioProducto
             // 
             this.txtPrecioProducto.Location = new System.Drawing.Point(45, 200);
+            this.txtPrecioProducto.Multiline = true;
             this.txtPrecioProducto.Name = "txtPrecioProducto";
-            this.txtPrecioProducto.Size = new System.Drawing.Size(149, 20);
+            this.txtPrecioProducto.Size = new System.Drawing.Size(149, 28);
             this.txtPrecioProducto.TabIndex = 8;
             // 
             // txtCantidadProducto
             // 
             this.txtCantidadProducto.Location = new System.Drawing.Point(45, 123);
+            this.txtCantidadProducto.Multiline = true;
             this.txtCantidadProducto.Name = "txtCantidadProducto";
-            this.txtCantidadProducto.Size = new System.Drawing.Size(149, 20);
+            this.txtCantidadProducto.Size = new System.Drawing.Size(149, 29);
             this.txtCantidadProducto.TabIndex = 7;
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.Location = new System.Drawing.Point(45, 36);
+            this.txtNombreProducto.Multiline = true;
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(149, 20);
+            this.txtNombreProducto.Size = new System.Drawing.Size(149, 28);
             this.txtNombreProducto.TabIndex = 6;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(13, 246);
+            this.btnSalir.Location = new System.Drawing.Point(6, 262);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 5;
@@ -126,7 +131,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(118, 246);
+            this.btnAgregar.Location = new System.Drawing.Point(9, 253);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 1;
@@ -141,10 +146,10 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvCarrito.Location = new System.Drawing.Point(5, 20);
+            this.dgvCarrito.Location = new System.Drawing.Point(6, 38);
             this.dgvCarrito.Name = "dgvCarrito";
             this.dgvCarrito.RowHeadersWidth = 62;
-            this.dgvCarrito.Size = new System.Drawing.Size(557, 220);
+            this.dgvCarrito.Size = new System.Drawing.Size(490, 220);
             this.dgvCarrito.TabIndex = 0;
             // 
             // Column1
@@ -170,26 +175,28 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblEstadoPila);
             this.groupBox2.Controls.Add(this.txttotal);
             this.groupBox2.Controls.Add(this.dgvCarrito);
+            this.groupBox2.Controls.Add(this.btnSalir);
             this.groupBox2.Controls.Add(this.btnFinslizarCompra);
-            this.groupBox2.Location = new System.Drawing.Point(211, 9);
+            this.groupBox2.Location = new System.Drawing.Point(211, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(569, 275);
+            this.groupBox2.Size = new System.Drawing.Size(502, 290);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Carrito de Compras";
             // 
             // txttotal
             // 
-            this.txttotal.Location = new System.Drawing.Point(369, 246);
+            this.txttotal.Location = new System.Drawing.Point(310, 264);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(100, 20);
             this.txttotal.TabIndex = 1;
             // 
             // btnFinslizarCompra
             // 
-            this.btnFinslizarCompra.Location = new System.Drawing.Point(475, 246);
+            this.btnFinslizarCompra.Location = new System.Drawing.Point(421, 264);
             this.btnFinslizarCompra.Name = "btnFinslizarCompra";
             this.btnFinslizarCompra.Size = new System.Drawing.Size(75, 23);
             this.btnFinslizarCompra.TabIndex = 0;
@@ -197,14 +204,33 @@
             this.btnFinslizarCompra.UseVisualStyleBackColor = true;
             this.btnFinslizarCompra.Click += new System.EventHandler(this.btnFinslizarCompra_Click_1);
             // 
+            // lblEstadoPila
+            // 
+            this.lblEstadoPila.AutoSize = true;
+            this.lblEstadoPila.Location = new System.Drawing.Point(404, 16);
+            this.lblEstadoPila.Name = "lblEstadoPila";
+            this.lblEstadoPila.Size = new System.Drawing.Size(92, 13);
+            this.lblEstadoPila.TabIndex = 2;
+            this.lblEstadoPila.Text = "Tamaño de la Pila";
+            // 
+            // btnEliminarUltimo
+            // 
+            this.btnEliminarUltimo.Location = new System.Drawing.Point(119, 253);
+            this.btnEliminarUltimo.Name = "btnEliminarUltimo";
+            this.btnEliminarUltimo.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarUltimo.TabIndex = 9;
+            this.btnEliminarUltimo.Text = "Eliminar";
+            this.btnEliminarUltimo.UseVisualStyleBackColor = true;
+            this.btnEliminarUltimo.Click += new System.EventHandler(this.btnEliminarUltimo_Click);
+            // 
             // Pilas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 311);
+            this.ClientSize = new System.Drawing.Size(720, 311);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pilas";
             this.Text = "Pilas";
             this.groupBox1.ResumeLayout(false);
@@ -234,5 +260,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Button btnFinslizarCompra;
+        private System.Windows.Forms.Button btnEliminarUltimo;
+        private System.Windows.Forms.Label lblEstadoPila;
     }
 }

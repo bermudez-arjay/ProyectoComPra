@@ -25,15 +25,16 @@ namespace ProyectoCompra.ColasSimples
                 Precio = precio;
             }
         }
+
         private Queue<Producto> purchaseQueue;
         private int queueSize;
-
 
         public ColasSimple()
         {
             InitializeComponent();
+            purchaseQueue = new Queue<Producto>(); 
         }
-      
+
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             string nombre = txtProducto.Text;
@@ -41,7 +42,7 @@ namespace ProyectoCompra.ColasSimples
             decimal precio;
 
             if (string.IsNullOrWhiteSpace(nombre) ||
-            !int.TryParse(txtCantidad.Text, out cantidad) ||
+                !int.TryParse(txtCantidad.Text, out cantidad) ||
                 !decimal.TryParse(txtPrecio.Text, out precio) ||
                 cantidad <= 0 ||
                 precio < 0)
@@ -49,11 +50,13 @@ namespace ProyectoCompra.ColasSimples
                 MessageBox.Show("Por favor, ingresa datos válidos.");
                 return;
             }
+
             if (purchaseQueue == null)
             {
                 MessageBox.Show("Por favor, establece el tamaño de la cola");
                 return;
             }
+
             if (purchaseQueue.Count >= queueSize)
             {
                 MessageBox.Show("La cola está llena. No se pueden agregar más productos.");
@@ -62,12 +65,12 @@ namespace ProyectoCompra.ColasSimples
 
             var producto = new Producto(nombre, cantidad, precio);
             purchaseQueue.Enqueue(producto);
-            dGVProductos.Rows.Add(producto.Nombre, producto.Cantidad, producto.Precio);
+
+            UpdateDataGridView();
 
             txtProducto.Clear();
             txtCantidad.Clear();
             txtPrecio.Clear();
-
         }
 
         private void btnSize_Click(object sender, EventArgs e)
@@ -77,7 +80,7 @@ namespace ProyectoCompra.ColasSimples
                 queueSize = size;
                 purchaseQueue = new Queue<Producto>();
 
-                MessageBox.Show("tamaño ya definido ingrese los productos  ");
+                MessageBox.Show("Tamaño de la cola definido. Ahora puedes agregar productos.");
             }
             else
             {
@@ -85,11 +88,35 @@ namespace ProyectoCompra.ColasSimples
             }
         }
 
-    
+        private void btnRemoveProduct_Click(object sender, EventArgs e)
+        {
+            if (purchaseQueue.Count == 0)
+            {
+                MessageBox.Show("No hay productos para eliminar.");
+                return;
+            }
+
+            Producto productoEliminado = purchaseQueue.Dequeue();
+
+            UpdateDataGridView();
+
+            MessageBox.Show($"Producto eliminado: {productoEliminado.Nombre}");
+        }
+
+        private void UpdateDataGridView()
+        {
+            dGVProductos.Rows.Clear();
+
+            foreach (var producto in purchaseQueue)
+            {
+                dGVProductos.Rows.Add(producto.Nombre, producto.Precio, producto.Cantidad);
+            }
+        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
     }
+
 }

@@ -132,7 +132,6 @@
             this.Salir.TabIndex = 0;
             this.Salir.Text = "Salir";
             this.Salir.UseVisualStyleBackColor = true;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // AgregarProducto
             // 

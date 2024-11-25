@@ -7,18 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoCompra.ListasDoble;
 
 namespace ProyectoCompra.ListasDobles
 {
-
-   
     public partial class ListaDoble : Form
     {
         private ListaDobleProductos listaProductos = new ListaDobleProductos();
+
         public ListaDoble()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -53,17 +52,38 @@ namespace ProyectoCompra.ListasDobles
         private void btnComprar_Click(object sender, EventArgs e)
         {
             listaProductos = new ListaDobleProductos();
-
             dataGridView1.DataSource = null;
-
             txtTotalCompra.Text = 0.00.ToString();
 
             MessageBox.Show("Desea Realizar esta Compra", "Confirmar Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        private void btnOrdenarAdelanteAtras_Click(object sender, EventArgs e)
+        {
+            listaProductos.OrdenarAdelanteAtras();
+            MostrarProductos();
+        }
+        private void btnOrdenarAtrasAdelante_Click(object sender, EventArgs e)
+        {
+            listaProductos.OrdenarAtrasAdelante();
+            MostrarProductos();
+        }
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            string nombre = txtELimarNodo.Text;
+            if (string.IsNullOrWhiteSpace(nombre))
+            {
+                MessageBox.Show("Por favor, ingresa el nombre del producto a eliminar.");
+                return;
+            }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            listaProductos.EliminarProducto(nombre);
+            MostrarProductos();
+        }
+
+        private void lb1_Click(object sender, EventArgs e)
         {
 
         }
     }
+
 }
