@@ -1,4 +1,4 @@
-﻿namespace ProyectoCompra.ArbolesAVL
+﻿namespace ProyectoCompra.ArboleAVL
 {
     partial class ArbolesAVL
     {

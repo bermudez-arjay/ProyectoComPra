@@ -138,16 +138,16 @@
             // arbolesBinariosToolStripMenuItem
             // 
             this.arbolesBinariosToolStripMenuItem.Name = "arbolesBinariosToolStripMenuItem";
-            this.arbolesBinariosToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
+            this.arbolesBinariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.arbolesBinariosToolStripMenuItem.Text = "Arboles binarios";
-            this.arbolesBinariosToolStripMenuItem.Click += new System.EventHandler(this.ArbolesBinarios);
+            this.arbolesBinariosToolStripMenuItem.Click += new System.EventHandler(this.BinariosArboles);
             // 
             // arbolesAVLToolStripMenuItem
             // 
             this.arbolesAVLToolStripMenuItem.Name = "arbolesAVLToolStripMenuItem";
-            this.arbolesAVLToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
+            this.arbolesAVLToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.arbolesAVLToolStripMenuItem.Text = "Arboles AVL";
-            this.arbolesAVLToolStripMenuItem.Click += new System.EventHandler(this.ArbolesAVL);
+            this.arbolesAVLToolStripMenuItem.Click += new System.EventHandler(this.AvlArboles);
             // 
             // grafosToolStripMenuItem
             // 
@@ -162,21 +162,21 @@
             // dijkstraToolStripMenuItem
             // 
             this.dijkstraToolStripMenuItem.Name = "dijkstraToolStripMenuItem";
-            this.dijkstraToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dijkstraToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.dijkstraToolStripMenuItem.Text = "Dijkstra";
             this.dijkstraToolStripMenuItem.Click += new System.EventHandler(this.Dijkstra);
             // 
             // floydToolStripMenuItem
             // 
             this.floydToolStripMenuItem.Name = "floydToolStripMenuItem";
-            this.floydToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.floydToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.floydToolStripMenuItem.Text = "Floyd";
             this.floydToolStripMenuItem.Click += new System.EventHandler(this.Floyds);
             // 
             // marshallToolStripMenuItem
             // 
             this.marshallToolStripMenuItem.Name = "marshallToolStripMenuItem";
-            this.marshallToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.marshallToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.marshallToolStripMenuItem.Text = "Marshall";
             this.marshallToolStripMenuItem.Click += new System.EventHandler(this.Marshal);
             // 

@@ -6,9 +6,11 @@ using ProyectoCompra.ColasSimples;
 using ProyectoCompra.Grafos.Dijasktra;
 using ProyectoCompra.Grafos.Floyd;
 using ProyectoCompra.ListasSimple;
+using ProyectoCompra.ArboleAVL;
 using System.Windows.Forms;
 using ProyectoCompra.ListasDobles;
 using ProyectoCompra.Grafos.Marshall;
+using ProyectoCompra.ArboleBinario;
 
 namespace ProyectoCompra
 {
@@ -55,15 +57,6 @@ namespace ProyectoCompra
         }
 
 
-        private void ArbolesBinarios(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ArbolesAVL(object sender, EventArgs e)
-        {
-
-        }
 
         private void Dijkstra(object sender, EventArgs e)
         {
@@ -96,6 +89,21 @@ namespace ProyectoCompra
         private void Marshal(object sender, EventArgs e)
         {
             Marshall frm = new Marshall();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void BinariosArboles(object sender, EventArgs e)
+        {
+
+            ArbolesBinarios frm = new ArbolesBinarios();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void AvlArboles(object sender, EventArgs e)
+        {
+            ArbolesAVL frm = new ArbolesAVL();
             frm.MdiParent = this;
             frm.Show();
         }

@@ -46,22 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArbolesAVL\ArbolesAVL.cs">
+    <Compile Include="ArboleAVL\ArbolesAVL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArbolesAVL\ArbolesAVL.Designer.cs">
+    <Compile Include="ArboleAVL\ArbolesAVL.Designer.cs">
       <DependentUpon>ArbolesAVL.cs</DependentUpon>
     </Compile>
-    <Compile Include="ArbolesAVL\ArbolNodo.cs" />
-    <Compile Include="ArbolesAVL\ArbolAVL.cs" />
-    <Compile Include="ArbolesBinarios\ArbolBinario.cs" />
-    <Compile Include="ArbolesBinarios\ArbolesBinarios.cs">
+    <Compile Include="ArboleAVL\ArbolNodo.cs" />
+    <Compile Include="ArboleAVL\ArbolAVL.cs" />
+    <Compile Include="ArboleBinario\ArbolBinario.cs" />
+    <Compile Include="ArboleBinario\ArbolesBinarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArbolesBinarios\ArbolesBinarios.Designer.cs">
+    <Compile Include="ArboleBinario\ArbolesBinarios.Designer.cs">
       <DependentUpon>ArbolesBinarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="ArbolesBinarios\NodoArbol.cs" />
+    <Compile Include="ArboleBinario\NodoArbol.cs" />
     <Compile Include="CircularesCOlas\ColaCircular.cs" />
     <Compile Include="ColasSimples\ColasSimple.cs">
       <SubType>Form</SubType>
@@ -126,10 +126,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ArbolesAVL\ArbolesAVL.resx">
+    <EmbeddedResource Include="ArboleAVL\ArbolesAVL.resx">
       <DependentUpon>ArbolesAVL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ArbolesBinarios\ArbolesBinarios.resx">
+    <EmbeddedResource Include="ArboleBinario\ArbolesBinarios.resx">
       <DependentUpon>ArbolesBinarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CircularesCOlas\ColasCiculares.resx">

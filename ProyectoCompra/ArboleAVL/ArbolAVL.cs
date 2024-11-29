@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoCompra.ArbolesAVL
+namespace ProyectoCompra.ArboleAVL
 {
     public class ArbolAVL
     {

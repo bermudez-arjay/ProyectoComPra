@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoCompra.ArbolesBinarios
+namespace ProyectoCompra.ArboleBinario
 {
     public class NodoArbol
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoCompra.ArbolesAVL
+namespace ProyectoCompra.ArboleAVL
 {
     public partial class ArbolesAVL : Form
     {

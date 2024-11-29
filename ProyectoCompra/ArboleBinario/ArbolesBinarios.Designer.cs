@@ -1,4 +1,4 @@
-﻿namespace ProyectoCompra.ArbolesBinarios
+﻿namespace ProyectoCompra.ArboleBinario
 {
     partial class ArbolesBinarios
     {
